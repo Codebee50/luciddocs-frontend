@@ -59,6 +59,8 @@
 
   --color-denary: #aaaaaa;
   --color-senary: #22c55e;
+  --color-renary: #eab308;
+  --color-grey01: #101011;
 }
 
 @media (prefers-color-scheme: dark) {

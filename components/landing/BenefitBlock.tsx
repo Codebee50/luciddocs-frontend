@@ -1,14 +1,43 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { motion, Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.18 },
+  },
+};
+
+const fadeUpVariant: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
+
+const imageVariant: Variants = {
+  hidden: { opacity: 0, scale: 0.93, y: 24 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { duration: 0.75, ease: "easeOut" },
+  },
+};
+
+const blurBGVariant: Variants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.65, ease: "easeOut", delay: 0.18 } },
+};
 
 const BenefitBlock = ({
   imagePath,
   title,
   description,
   extraInfo,
-  direction
+  direction,
 }: {
   imagePath: string;
   title: string;
@@ -17,12 +46,23 @@ const BenefitBlock = ({
   direction: "left" | "right";
 }) => {
   return (
-    <div className="flex flex-col gap-5 mt-[100px]">
-      <div className={`flex flex-row items-center justify-between gap-10 ${direction === "right" ? "flex-row-reverse" : ""}`}>
-        <div className="relative w-full flex-1">
-          <div
+    <motion.div
+      className="flex flex-col gap-5 mt-[100px]"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <div
+        className={`flex flex-row items-center justify-between gap-10 ${
+          direction === "right" ? "flex-row-reverse" : ""
+        }`}
+      >
+        <motion.div className="relative w-full flex-1" variants={imageVariant}>
+          <motion.div
             className="absolute inset-0 flex items-center justify-center"
             style={{ zIndex: 0 }}
+            variants={blurBGVariant}
           >
             <div
               className="rounded-full w-[300px] h-[300px]"
@@ -31,8 +71,8 @@ const BenefitBlock = ({
                 background: "rgba(34,197,94,0.21)",
               }}
             />
-          </div>
-          <div className="relative z-10 overflow-hidden">
+          </motion.div>
+          <motion.div className="relative z-10 overflow-hidden" variants={imageVariant}>
             <Image
               src={imagePath}
               alt="quiz"
@@ -40,21 +80,43 @@ const BenefitBlock = ({
               height={500}
               className="w-full object-cover"
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="flex flex-col gap-3 flex-1">
-          <h2 className="text-3xl font-medium font-clash">{title}</h2>
-          <p className="text-denary font-poppins">{description}</p>
+        <motion.div className="flex flex-col gap-3 flex-1" variants={fadeUpVariant}>
+          <motion.h2
+            className="text-3xl font-medium font-clash"
+            variants={fadeUpVariant}
+            transition={{ delay: 0.14 }}
+          >
+            {title}
+          </motion.h2>
+          <motion.p
+            className="text-denary font-poppins"
+            variants={fadeUpVariant}
+            transition={{ delay: 0.22 }}
+          >
+            {description}
+          </motion.p>
 
-          {extraInfo}
+          {extraInfo && (
+            <motion.div variants={fadeUpVariant} transition={{ delay: 0.33 }}>
+              {extraInfo}
+            </motion.div>
+          )}
 
-          <button className="bg-[#1A1A1A] px-6 py-2 mt-5 rounded-md font-medium capitalize w-max flex flex-row items-center gap-2">
+          <motion.button
+            className="bg-[#1A1A1A] px-6 py-2 mt-5 rounded-md font-medium capitalize w-max flex flex-row items-center gap-2"
+            variants={fadeUpVariant}
+            whileHover={{ scale: 1.045, boxShadow: "0 2px 24px 0 rgba(34,197,94,0.11)" }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ type: "spring", stiffness: 140, damping: 9 }}
+          >
             Learn more <IoIosArrowRoundForward />
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

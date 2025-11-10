@@ -54,8 +54,8 @@ const BenefitBlock = ({
       viewport={{ once: true, amount: 0.2 }}
     >
       <div
-        className={`flex flex-row items-center justify-between gap-10 ${
-          direction === "right" ? "flex-row-reverse" : ""
+        className={`flex flex-col md:flex-row items-center justify-between gap-10 ${
+          direction === "right" ? "flex-col md:flex-row-reverse" : ""
         }`}
       >
         <motion.div className="relative w-full flex-1" variants={imageVariant}>

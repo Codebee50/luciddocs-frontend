@@ -64,19 +64,19 @@ const Benefits = () => {
           viewport={{ once: true, amount: 0.15 }}
         >
           <motion.div
-            className="flex flex-3 min-h-[400px] bg-[#101011] rounded-lg flex-row items-center gap-4 pl-8"
+            className="flex flex-3 min-h-[400px] bg-[#101011] rounded-lg flex-col md:flex-row items-center gap-4 pl-8"
             initial={{ opacity: 0, scale: 0.97, x: -30 }}
             whileInView={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true, amount: 0.2 }}
           >
             <motion.div
-              className="flex flex-col flex-1 gap-6"
+              className="flex flex-col flex-1 gap-6 py-7"
               variants={{
                 hidden: {},
                 visible: {
-                  transition: { staggerChildren: 0.12 }
-                }
+                  transition: { staggerChildren: 0.12 },
+                },
               }}
               initial="hidden"
               whileInView="visible"
@@ -105,7 +105,7 @@ const Benefits = () => {
               </motion.div>
 
               <motion.h1
-                className="text-white text-4xl font-clash gradient-text"
+                className="text-white text-2xl sm:text-4xl font-clash gradient-text"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.34 }}

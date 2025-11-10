@@ -84,7 +84,7 @@ const HowItWorks = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="w-full grid grid-cols-2 gap-20 items-center justify-center">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center justify-center">
         <div className="flex flex-col gap-3">
           <motion.h2
             className="text-4xl  font-clash gradient-text"
@@ -151,10 +151,10 @@ const HowItWorks = () => {
                     }}
                     viewport={{ once: true, amount: 0.6 }}
                   >
-                    <step.icon className="w-6 h-6" />
+                    <step.icon className="w-4 sm:w-6 h-4 sm:h-6" />
                   </motion.div>
                   <div>
-                    <h3 className="text-xl font-clash">{step.title}</h3>
+                    <h3 className="sm:text-xl font-clash">{step.title}</h3>
                     <p className="text-sm text-gray-500">
                       {step.short_description}
                     </p>
@@ -178,7 +178,7 @@ const HowItWorks = () => {
               alt="How It Works"
               width={500}
               height={500}
-              className="rounded-xl h-[400px] object-bottom object-cover flex-1"
+              className="rounded-xl h-[200px] lg:h-[400px] object-bottom object-cover flex-1"
             />
           </motion.div>
           {/* <Image src="/images/girloutdoorstudy.webp" alt="How It Works" width={500} height={500} className="rounded-xl h-[400px] object-bottom object-cover flex-1" /> */}
@@ -193,7 +193,7 @@ const HowItWorks = () => {
               alt="How It Works"
               width={500}
               height={500}
-              className="rounded-xl h-[600px] object-bottom object-cover flex-1"
+              className="rounded-xl h-[300px] lg:h-[600px] object-bottom object-cover flex-1"
             />
           </motion.div>
 

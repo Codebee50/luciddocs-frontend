@@ -62,7 +62,7 @@ const HeroSection = () => {
               variants={fadeUpVariant as Variants}
             >
               <motion.p
-                className="font-medium text-white"
+                className="font-medium text-white max-sm:text-sm"
                 variants={fadeVariant as Variants}
                 transition={{ delay: 0.15 }}
               >
@@ -76,7 +76,7 @@ const HeroSection = () => {
               </motion.span>
             </motion.div>
             <motion.h1
-              className="text-6xl text-center mt-5 capitalize font-clash"
+              className="text-4xl md:text-6xl text-center mt-5 capitalize font-clash"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.23 }}
             >
@@ -92,19 +92,21 @@ const HeroSection = () => {
               </span>
             </h1> */}
             <motion.p
-              className="text-center max-w-[700px] mx-auto text-[#AAAAAA]"
+              className="text-center max-w-[700px] mx-auto text-[#AAAAAA] max-sm:text-sm"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.34 }}
             >
-              Seamlessly convert your documents into interactive quizzes, concise flashcards, and detailed summaries. Accelerate your learning, and make studying 10X more efficient.
+              Seamlessly convert your documents into interactive quizzes,
+              concise flashcards, and detailed summaries. Accelerate your
+              learning, and make studying 10X more efficient.
             </motion.p>
             <motion.div
-              className="flex flex-row items-center justify-center gap-4 mt-5"
+              className="flex flex-row items-center justify-center gap-4 mt-5 flex-wrap"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.48 }}
             >
               <motion.button
-                className="bg-green-800 text-white px-6 py-3 rounded-full font-medium"
+                className="bg-green-800 text-white px-6 py-3 rounded-full font-medium text-nowrap max-sm:w-full"
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
@@ -112,7 +114,7 @@ const HeroSection = () => {
                 Get started for free
               </motion.button>
               <motion.button
-                className="bg-transparent border border-[#5A5A5A] text-white px-6 py-3 rounded-full font-medium"
+                className="bg-transparent border border-[#5A5A5A] text-white px-6 py-3 rounded-full font-medium text-nowrap max-sm:w-full"
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
@@ -138,12 +140,12 @@ const HeroSection = () => {
             alt="hero-section-image"
             width={1000}
             height={1000}
-            className="w-full min-h-[500px] object-cover object-top z-0"
+            className="w-full min-h-[300px] lg:min-h-[500px] object-cover object-top z-0"
           />
         </motion.div>
 
         <motion.div
-          className="w-full max-w-[1000px] mx-auto h-[80vh] max-h-[600px] rounded-lg p-2 z-10 bg-[#1E1E1E] self-end"
+          className="w-[95%] lg:w-full max-w-[1000px] mx-auto lg:h-[80vh] max-h-[600px] rounded-t-lg p-2 z-10 bg-[#1E1E1E] self-end "
           initial={{ opacity: 0, y: 60, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.92, ease: "easeOut", delay: 0.2 }}
@@ -154,12 +156,12 @@ const HeroSection = () => {
             alt="hero-section-image"
             width={1000}
             height={1000}
-            className="w-full h-full object-cover object-top rounded-lg"
+            className="w-full h-full object-cover object-top rounded-t-lg"
           />
         </motion.div>
 
         <motion.div
-          className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-10"
+          className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.35 }}

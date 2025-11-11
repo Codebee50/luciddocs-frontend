@@ -82,7 +82,7 @@ const SummarizeContentIllustration = () => {
       className="w-full relative min-h-[300px] flex items-center justify-center"
       ref={containerRef}
     >
-      <div className="w-full min-h-[100px] max-h-[500px] overflow-y-hidden relative bg-grey01 rounded-lg border p-4 border-denary/30 flex flex-col items-center justify-center">
+      <div className="w-full min-h-[300px] max-h-[500px] overflow-y-hidden relative bg-grey01 rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start">
         {/* Show Long Content */}
         {(!started || step === 0 || step === 1) && (
           <div className="w-full">{LONG_TEXT}</div>
@@ -101,7 +101,7 @@ const SummarizeContentIllustration = () => {
             <TypeAnimation
               sequence={SHORT_TEXT_SEQUENCE}
               wrapper="span"
-              speed={30}
+              speed={2}
               className="text-denary/90 font-poppins text-sm"
               repeat={0}
             />

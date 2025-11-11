@@ -62,7 +62,7 @@ const SummarizeContentIllustration = () => {
       timers.push(
         setTimeout(() => {
           setStep(1);
-        }, 2000)
+        }, 1500)
       );
     }
     if (step === 1) {
@@ -89,7 +89,7 @@ const SummarizeContentIllustration = () => {
         )}
 
         {/* Show ScanLottie */}
-        {started && step === 1 && (
+        {started && (step === 1 || step === 2) && (
           <div className="flex w-full items-center justify-center absolute inset-0">
             <ScanLottie />
           </div>

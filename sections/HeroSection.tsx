@@ -160,12 +160,7 @@ const HeroSection = () => {
           />
         </motion.div>
 
-        <motion.div
-          className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut", delay: 0.35 }}
-        ></motion.div>
+        <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div>
       </div>
     </motion.div>
   );

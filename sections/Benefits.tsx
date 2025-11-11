@@ -6,7 +6,8 @@ import {
   IoIosArrowRoundForward,
 } from "react-icons/io";
 import Image from "next/image";
-import { motion, Variants } from "framer-motion";
+import { motion} from "framer-motion";
+import FlashcardLandingPageDemo from "@/components/landing/FlashcardLandingPageDemo";
 
 const Benefits = () => {
   const quizTypes = [
@@ -18,7 +19,7 @@ const Benefits = () => {
   return (
     <div className="section-container padding-x">
       <div className="w-full flex flex-col items-center justify-center">
-        <h2 className="text-4xl text-center font-clash">
+        <h2 className="sm:text-4xl text-2xl text-center font-clash">
           How People use LucidDocs to <br />
           <span className="gradient-text">study smarter, not harder</span>
         </h2>
@@ -42,18 +43,20 @@ const Benefits = () => {
               ))}
             </div>
           }
+          direction="left"
         />
 
         <BenefitBlock
           imagePath="/images/benefits/benefit3.svg"
           title="Summarize documents with ease"
           description="Upload your PDF, Word, or any document and get a summary based on the content. Export your summary as pdf or take it as an exam on LucidDocs."
-          // extraInfo={
-          //   <div className="flex flex-col gap-4">
-          //     <p className="text-white">Summarize your documents with ease. Our AI will generate a summary of your document based on the content. You can export your summary as a pdf or take it as an exam on LucidDocs.</p>
-          //   </div>
-          // }
           direction="right"
+        />
+        <BenefitBlock
+          illustrationContent={<FlashcardLandingPageDemo />}
+          title="Generate flashcards from your documents"
+          description="Upload your PDF, Word, or any document and get a flashcard based on the content. Export your flashcard as pdf or take it as an exam on LucidDocs."
+          direction="left"
         />
 
         <motion.div

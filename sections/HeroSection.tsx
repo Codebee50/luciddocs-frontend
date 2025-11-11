@@ -130,10 +130,10 @@ const HeroSection = () => {
       <div className="w-full relative stack mt-10">
         <motion.div
           className="h-full overflow-hidden self-end"
-          initial={{ opacity: 0, y: 40, scale: 1.03 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.3 }}
+          // initial={{ opacity: 0, y: 40, scale: 1.03 }}
+          // whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          // transition={{ duration: 1, ease: "easeOut" }}
+          // viewport={{ once: true, amount: 0.3 }}
         >
           <Image
             src="/images/vibesbg2.svg"
@@ -146,10 +146,10 @@ const HeroSection = () => {
 
         <motion.div
           className="w-[95%] lg:w-full max-w-[1000px] mx-auto lg:h-[80vh] max-h-[600px] rounded-t-lg p-2 z-10 bg-[#1E1E1E] self-end "
-          initial={{ opacity: 0, y: 60, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.92, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true, amount: 0.2 }}
+          // initial={{ opacity: 0, y: 60, scale: 0.98 }}
+          // whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          // transition={{ duration: 0.92, ease: "easeOut", delay: 0.2 }}
+          // viewport={{ once: true, amount: 0.2 }}
         >
           <Image
             src="/images/dashpreview1.png"

@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 import { motion} from "framer-motion";
 import FlashcardLandingPageDemo from "@/components/landing/FlashcardLandingPageDemo";
+import SummarizeContentIllustration from "@/components/landing/SummarizeContentIllustration";
 
 const Benefits = () => {
   const quizTypes = [
@@ -51,6 +52,7 @@ const Benefits = () => {
           title="Summarize documents with ease"
           description="Upload your PDF, Word, or any document and get a summary based on the content. Export your summary as pdf or take it as an exam on LucidDocs."
           direction="right"
+          illustrationContent={<SummarizeContentIllustration />}
         />
         <BenefitBlock
           illustrationContent={<FlashcardLandingPageDemo />}

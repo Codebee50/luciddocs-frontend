@@ -34,7 +34,7 @@ const ArrowButton = ({
 }) => {
   return (
     <motion.div
-      className="w-10 h-10 bg-grey01 border border-denary/30 shrink-0 rounded-full flex items-center justify-center cursor-pointer hover:bg-senary/10"
+      className="w-10 h-10 bg-grey01 border border-denary/30 shrink-0 rounded-full flex items-center justify-center cursor-pointer hover:bg-senary/10 z-20"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={onClick}
@@ -111,7 +111,7 @@ const FlashcardLandingPageDemo = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full relative bg-background border border-denary/10 p-4 sm:p-10 to-transparent rounded-lg">
+      <div className="w-full relative bg-background  p-4 sm:p-10 to-transparent rounded-lg">
         {/* <motion.div
           className="absolute inset-0 flex items-center justify-center"
           style={{ zIndex: 0 }}
@@ -126,7 +126,7 @@ const FlashcardLandingPageDemo = () => {
           />
         </motion.div> */}
 
-        <div className="w-full flex flex-row items-center justify-between z-20 gap-4 sm:gap-10">
+        <div className="w-full flex flex-row items-center justify-between z-20 gap-4 sm:gap-10 relative">
           <ArrowButton
             icon={<GoArrowLeft />}
             onClick={handlePreviousFlashcard}
@@ -137,7 +137,7 @@ const FlashcardLandingPageDemo = () => {
             <div className="w-[90%] bg-gray-900 h-[200px] flex flex-row items-center justify-center mt-3 mx-auto rounded-b-2xl"></div>
 
             <motion.div
-              className="w-full h-[200px] bg-black flex flex-col items-center justify-between py-10 px-4 rounded-3xl"
+              className="w-full h-[200px] bg-black flex flex-col items-center justify-between py-10 px-4 rounded-3xl z-20"
               variants={flipCardVariants}
               initial={false}
               animate={isFlipped ? "back" : "front"}
@@ -180,7 +180,7 @@ const FlashcardLandingPageDemo = () => {
                   zIndex: 3,
                 }}
               >
-                <p className="text-white text-2xl font-medium text-center font-clash gradient-text">
+                <p className="text-white text-2xl font-medium text-center font-clash">
                   {flashcards[selectedFlashcard].answer}
                 </p>
                 <p
@@ -195,6 +195,8 @@ const FlashcardLandingPageDemo = () => {
               </div>
             </motion.div>
           </div>
+
+          <div className="absolute inset-0 bg-linear-to-r from-transparent to-background z-10"></div>
           <ArrowButton icon={<GoArrowRight />} onClick={handleNextFlashcard} />
         </div>
       </div>

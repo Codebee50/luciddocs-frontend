@@ -6,7 +6,7 @@ import {
   IoIosArrowRoundForward,
 } from "react-icons/io";
 import Image from "next/image";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 import FlashcardLandingPageDemo from "@/components/landing/FlashcardLandingPageDemo";
 import SummarizeContentIllustration from "@/components/landing/SummarizeContentIllustration";
 import GenerateQuizIllustrationContent from "@/components/landing/GenerateQuizIllustrationContent";
@@ -29,6 +29,20 @@ const Benefits = () => {
 
       <div className="flex flex-col gap-10">
         <BenefitBlock
+          imagePath="/images/benefits/benefit3.svg"
+          title="Summarize documents with ease"
+          description="Upload your PDF, Word, or any document and get a summary based on the content. Export your summary as pdf or take it as an exam on LucidDocs."
+          direction="right"
+          illustrationContent={<SummarizeContentIllustration />}
+        />
+        <BenefitBlock
+          illustrationContent={<FlashcardLandingPageDemo />}
+          title="Generate flashcards from your documents"
+          description="Upload your PDF, Word, or any document and get a flashcard based on the content. Export your flashcard as pdf or take it as an exam on LucidDocs."
+          direction="left"
+        />
+
+        <BenefitBlock
           imagePath="/images/benefits/benefit4.svg"
           title="From document to quiz in seconds."
           description="Upload your PDF, Word, or any document and get a quiz based on the content. Export your quiz as pdf or take it as an exam on LucidDocs."
@@ -46,20 +60,6 @@ const Benefits = () => {
               ))}
             </div>
           }
-          direction="left"
-        />
-
-        <BenefitBlock
-          imagePath="/images/benefits/benefit3.svg"
-          title="Summarize documents with ease"
-          description="Upload your PDF, Word, or any document and get a summary based on the content. Export your summary as pdf or take it as an exam on LucidDocs."
-          direction="right"
-          illustrationContent={<SummarizeContentIllustration />}
-        />
-        <BenefitBlock
-          illustrationContent={<FlashcardLandingPageDemo />}
-          title="Generate flashcards from your documents"
-          description="Upload your PDF, Word, or any document and get a flashcard based on the content. Export your flashcard as pdf or take it as an exam on LucidDocs."
           direction="left"
         />
 

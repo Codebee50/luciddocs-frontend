@@ -82,10 +82,10 @@ const SummarizeContentIllustration = () => {
       className="w-full relative min-h-[300px] flex items-center justify-center"
       ref={containerRef}
     >
-      <div className="w-full min-h-[250px] max-h-[500px] overflow-y-hidden relative bg-background rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start">
+      <div className="sm:w-full w-[90%] mx-auto min-h-[250px] max-h-[500px] max-sm:overflow-y-hidden no-scrollbar overflow-hidden  bg-background rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start relative">
         {/* Show Long Content */}
         {/* {(!started || step === 0 || step === 1) && ( */}
-          <div className="w-full font-light">{LONG_TEXT}</div>
+        <div className="w-full font-light">{LONG_TEXT}</div>
         {/* )} */}
 
         {/* Show ScanLottie */}
@@ -94,24 +94,19 @@ const SummarizeContentIllustration = () => {
             <ScanLottie />
           </div>
         )} */}
-
-        {/* Show TypeAnimation (Short Text) */}
-        {started && step === 2 && (
-          <div className="w-full">
-            <TypeAnimation
-              sequence={SHORT_TEXT_SEQUENCE}
-              wrapper="span"
-              speed={2}
-              className="text-denary/90 font-poppins text-sm font-light"
-              repeat={0}
-            />
-          </div>
-        )}
       </div>
 
-      <div className="absolute inset-0 bg-linear-to-r from-transparent to-background">
-
+      <div className="w-full absolute sm:bottom-0 sm:right-10 bg-background p-4 border border-senary/30 rounded-lg shadow-2xl shadow-senary/10">
+        <TypeAnimation
+          sequence={SHORT_TEXT_SEQUENCE}
+          wrapper="span"
+          speed={2}
+          className="text-denary/90 font-poppins text-sm font-light"
+          repeat={0}
+        />
       </div>
+
+      <div className="absolute inset-0 max-sm:hidden bg-linear-to-r from-transparent to-background z-20"></div>
     </div>
   );
 };

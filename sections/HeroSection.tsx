@@ -114,7 +114,7 @@ const HeroSection = () => {
                 Get started for free
               </motion.button>
               <motion.button
-                className="bg-transparent border border-[#5A5A5A] text-white px-6 py-3 rounded-full font-medium text-nowrap max-sm:w-full"
+                className="bg-transparent border border-denary/30 text-white px-6 py-3 rounded-full font-medium text-nowrap max-sm:w-full"
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}

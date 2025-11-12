@@ -111,7 +111,7 @@ const FlashcardLandingPageDemo = () => {
 
   return (
     <div className="w-full">
-      <div className="w-full relative bg-background  p-4 sm:p-10 to-transparent rounded-lg">
+      <div className="w-full relative bg-background   to-transparent rounded-lg">
         {/* <motion.div
           className="absolute inset-0 flex items-center justify-center"
           style={{ zIndex: 0 }}

@@ -104,6 +104,11 @@ body {
   .stack > * {
     grid-area: 1 / 1; /* stack everything on top of each other */
   }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
 }
 
 .glow-box {

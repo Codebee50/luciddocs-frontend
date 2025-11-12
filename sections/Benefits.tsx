@@ -9,6 +9,7 @@ import Image from "next/image";
 import { motion} from "framer-motion";
 import FlashcardLandingPageDemo from "@/components/landing/FlashcardLandingPageDemo";
 import SummarizeContentIllustration from "@/components/landing/SummarizeContentIllustration";
+import GenerateQuizIllustrationContent from "@/components/landing/GenerateQuizIllustrationContent";
 
 const Benefits = () => {
   const quizTypes = [
@@ -31,6 +32,7 @@ const Benefits = () => {
           imagePath="/images/benefits/benefit4.svg"
           title="Transform documents into quizzes"
           description="Upload your PDF, Word, or any document and get a quiz based on the content. Export your quiz as pdf or take it as an exam on LucidDocs."
+          // illustrationContent={<GenerateQuizIllustrationContent />}
           extraInfo={
             <div className="flex flex-col gap-4">
               {quizTypes.map((quiz) => (

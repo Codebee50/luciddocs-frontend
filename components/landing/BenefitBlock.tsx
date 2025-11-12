@@ -71,7 +71,7 @@ const BenefitBlock = ({
             className="relative w-full flex-1"
             variants={imageVariant}
           >
-            <motion.div
+            {/* <motion.div
               className="absolute inset-0 flex items-center justify-center"
               style={{ zIndex: 0 }}
               variants={blurBGVariant}
@@ -83,7 +83,7 @@ const BenefitBlock = ({
                   background: "rgba(34,197,94,0.21)",
                 }}
               />
-            </motion.div>
+            </motion.div> */}
             <motion.div
               className="relative z-10 overflow-hidden"
               variants={imageVariant}
@@ -104,14 +104,14 @@ const BenefitBlock = ({
           variants={fadeUpVariant}
         >
           <motion.h2
-            className="sm:text-3xl text-2xl font-medium font-clash"
+            className="sm:text-5xl text-2xl font-medium font-clash"
             variants={fadeUpVariant}
             transition={{ delay: 0.14 }}
           >
             {title}
           </motion.h2>
           <motion.p
-            className="text-denary font-poppins max-sm:text-sm"
+            className="text-denary font-poppins font-medium max-sm:text-sm"
             variants={fadeUpVariant}
             transition={{ delay: 0.22 }}
           >

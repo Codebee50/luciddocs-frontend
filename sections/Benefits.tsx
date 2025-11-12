@@ -30,7 +30,7 @@ const Benefits = () => {
       <div className="flex flex-col gap-10">
         <BenefitBlock
           imagePath="/images/benefits/benefit4.svg"
-          title="Transform documents into quizzes"
+          title="From document to quiz in seconds."
           description="Upload your PDF, Word, or any document and get a quiz based on the content. Export your quiz as pdf or take it as an exam on LucidDocs."
           // illustrationContent={<GenerateQuizIllustrationContent />}
           extraInfo={

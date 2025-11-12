@@ -82,18 +82,18 @@ const SummarizeContentIllustration = () => {
       className="w-full relative min-h-[300px] flex items-center justify-center"
       ref={containerRef}
     >
-      <div className="w-full min-h-[250px] max-h-[500px] overflow-y-hidden relative bg-grey01 rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start">
+      <div className="w-full min-h-[250px] max-h-[500px] overflow-y-hidden relative bg-background rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start">
         {/* Show Long Content */}
-        {(!started || step === 0 || step === 1) && (
-          <div className="w-full">{LONG_TEXT}</div>
-        )}
+        {/* {(!started || step === 0 || step === 1) && ( */}
+          <div className="w-full font-light">{LONG_TEXT}</div>
+        {/* )} */}
 
         {/* Show ScanLottie */}
-        {started && (step === 1 || step === 2) && (
+        {/* {started && (step === 1 || step === 2) && (
           <div className="flex w-full items-center justify-center absolute inset-0">
             <ScanLottie />
           </div>
-        )}
+        )} */}
 
         {/* Show TypeAnimation (Short Text) */}
         {started && step === 2 && (
@@ -102,11 +102,15 @@ const SummarizeContentIllustration = () => {
               sequence={SHORT_TEXT_SEQUENCE}
               wrapper="span"
               speed={2}
-              className="text-denary/90 font-poppins text-sm"
+              className="text-denary/90 font-poppins text-sm font-light"
               repeat={0}
             />
           </div>
         )}
+      </div>
+
+      <div className="absolute inset-0 bg-linear-to-r from-transparent to-background">
+
       </div>
     </div>
   );

@@ -2,10 +2,10 @@
 
 import React from "react";
 import Nav from "@/components/Nav";
-import { RxCaretRight } from "react-icons/rx";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { RxCaretRight } from "react-icons/rx";
 
 const containerVariants = {
   hidden: {},
@@ -103,12 +103,12 @@ const HeroSection = () => {
               learning, and make studying 10X more efficient.
             </motion.p>
             <motion.div
-              className="flex flex-row items-center justify-center gap-4 mt-5 flex-wrap"
+              className="flex flex-row items-center justify-center gap-4 mt-10 flex-wrap"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.48 }}
             >
               <motion.button
-                className="bg-green-800 text-white px-6 py-3 rounded-full font-medium text-nowrap max-sm:w-full"
+                className="bg-green-800 text-white px-6 py-3 rounded-lg font-medium text-nowrap max-sm:w-full"
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
@@ -117,13 +117,15 @@ const HeroSection = () => {
                 Get started for free
               </motion.button>
               <motion.button
-                className="bg-transparent border border-denary/30 text-white px-6 py-3 rounded-full font-medium text-nowrap max-sm:w-full"
+                className="bg-transparent  px-6 py-3 rounded-lg font-medium text-nowrap max-sm:w-full flex flex-row items-center justify-center gap-2 text-denary"
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ delay: 0.18 }}
               >
                 Book a demo
+                <RxCaretRight size={20} />
+
               </motion.button>
             </motion.div>
           </motion.div>

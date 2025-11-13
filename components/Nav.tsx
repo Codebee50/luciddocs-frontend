@@ -23,7 +23,7 @@ const Nav = () => {
     },
   ];
   return (
-    <div className="flex flex-row items-center justify-between w-full max-w-[1000px] mx-auto bg-green-500/10 border border-green-500/20 backdrop-blur-sm rounded-full px-4 py-2">
+    <div className="flex flex-row items-center justify-between w-full max-w-[1000px] mx-auto bg-green-500/10 border border-green-500/20 backdrop-blur-sm rounded-lg px-4 py-2">
       <div className="flex flex-row items-center gap-6">
         <div className="flex items-center gap-2">
           <Image src="/lucidlogo.svg" alt="logo" width={30} height={30} />
@@ -48,7 +48,7 @@ const Nav = () => {
 
       <Link
         href="/login"
-        className="relative max-sm:hidden rounded-full px-7 py-2 overflow-hidden group bg-green-700 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300"
+        className="max-sm:hidden rounded-lg px-7 py-2 overflow-hidden group bg-green-700 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300"
       >
         <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
         <span className="relative text-white font-medium">Login</span>

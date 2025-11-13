@@ -18,24 +18,6 @@ const stepVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-const imageVariants = {
-  hidden: { opacity: 0, scale: 0.94, y: 25 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
-};
-
-const badgeVariants = {
-  hidden: { opacity: 0, y: 22 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
-};
 
 const HowItWorks = () => {
   const steps = [
@@ -71,12 +53,6 @@ const HowItWorks = () => {
     },
   ];
 
-  const faceImages = [
-    "/images/faces/face1.jpg",
-    "/images/faces/face2.webp",
-    "/images/faces/face3.jpeg",
-  ];
-
   return (
     <motion.div
       className="section-container padding-x w-full"
@@ -84,7 +60,7 @@ const HowItWorks = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-20 items-center justify-center">
+      <div className="w-full grid grid-cols-1 gap-20 items-center justify-center">
         <div className="flex flex-col gap-3">
           <motion.h2
             className="text-4xl  font-clash gradient-text"
@@ -97,7 +73,7 @@ const HowItWorks = () => {
           </motion.h2>
 
           <motion.div
-            className="flex flex-col gap-10 mt-10"
+            className="w-full grid grid-cols-1 sm:grid-cols-3 gap-3 mt-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -106,30 +82,12 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                className={`flex flex-row items-center gap-4`}
-                // className={`flex flex-row items-center gap-4 ${
-                //   index % 2 === 0 ? "flex-row-reverse" : ""
-                // }`}
+                className={`flex flex-col items-center  gap-4 h-full`}
                 variants={stepVariants as Variants}
               >
-                {/* <div>
-                  <motion.p
-                    className="text-4xl font-clash text-denary opacity-50 font-semibold"
-                    initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.15 + index * 0.1,
-                      ease: "easeOut",
-                    }}
-                    viewport={{ once: true, amount: 0.5 }}
-                  >
-                    0{index + 1}
-                  </motion.p>
-                </div> */}
-
+   
                 <motion.div
-                  className="flex flex-row items-center bg-[#161719] rounded-xl p-4 gap-4 shadow-sm border border-denary/10"
+                  className="flex flex-col items-center bg-bg-primary rounded-xl p-4 gap-4 shadow-sm border border-denary/10 h-full"
                   initial={{ opacity: 0, scale: 0.92 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -139,24 +97,14 @@ const HowItWorks = () => {
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-                  <motion.div
-                    className="bg-senary/20 text-renary rounded-full p-4"
-                    initial={{ opacity: 0, rotate: -20 }}
-                    whileInView={{ opacity: 1, rotate: 0 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: 0.28 + index * 0.14,
-                      type: "spring",
-                      stiffness: 100,
-                      damping: 10,
-                    }}
-                    viewport={{ once: true, amount: 0.6 }}
-                  >
-                    <step.icon className="w-4 sm:w-6 h-4 sm:h-6" />
-                  </motion.div>
+
+                  <div className="self-start ">
+                    <p className="font-clash text-xl font-semibold text-quaternary">0{index + 1}</p>
+                  </div>
+   
                   <div>
-                    <h3 className="sm:text-xl font-clash">{step.title}</h3>
-                    <p className="text-sm text-denary/70">
+                    <h3 className="font-medium">{step.title}</h3>
+                    <p className="text-sm text-denary/70 mt-2">
                       {step.short_description}
                     </p>
                   </div>
@@ -166,76 +114,7 @@ const HowItWorks = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 items-start gap-4 relative">
-          <motion.div
-            className="relative"
-            variants={imageVariants as Variants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <Image
-              src="/images/girlstudy.webp"
-              alt="How It Works"
-              width={500}
-              height={500}
-              className="rounded-xl h-[200px] lg:h-[400px] object-bottom object-cover flex-1"
-            />
-          </motion.div>
-          {/* <Image src="/images/girloutdoorstudy.webp" alt="How It Works" width={500} height={500} className="rounded-xl h-[400px] object-bottom object-cover flex-1" /> */}
-          <motion.div
-            variants={imageVariants as Variants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            <Image
-              src="/images/girloutdoorstudy.webp"
-              alt="How It Works"
-              width={500}
-              height={500}
-              className="rounded-xl h-[300px] lg:h-[600px] object-bottom object-cover flex-1"
-            />
-          </motion.div>
-
-          <motion.div
-            className=" px-7 py-6 bg-grey01 rounded-2xl absolute bottom-0 left-0 mb-10 flex flex-row items-center gap-5"
-            variants={badgeVariants as Variants}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.18 }}
-            viewport={{ once: true, amount: 0.1 }}
-          >
-            <div className="flex flex-row items-center -space-x-3">
-              {faceImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ scale: 0.85, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{
-                    delay: 0.22 + index * 0.07,
-                    duration: 0.38,
-                    ease: "easeOut",
-                  }}
-                  viewport={{ once: true, amount: 0.2 }}
-                >
-                  <Image
-                    src={image}
-                    alt="Face"
-                    width={50}
-                    height={50}
-                    className="rounded-full shrink-0 w-[50px] h-[50px] object-cover border-2 border-background"
-                  />
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="flex flex-col">
-              <p className="text-senary text-xl font-medium">10k+</p>
-              <p className="text-denary text-sm">Students</p>
-            </div>
-          </motion.div>
-        </div>
+        
       </div>
     </motion.div>
   );

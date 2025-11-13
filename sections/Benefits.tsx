@@ -30,7 +30,7 @@ const Benefits = () => {
         </h2>
       </div>
 
-      <div className="w-full bg-bg-primary grid grid-cols-1 md:grid-cols-2 gap-0 mt-30">
+      <div className="w-full bg-bg-primary grid grid-cols-1 md:grid-cols-2 gap-0 mt-20">
         <div className="border-t md:border-r border-b border-denary/10 max-sm:py-7 sm:p-10">
           <div className="flex flex-col gap-2">
             <h1 className="text-white text-2xl font-medium font-clash">

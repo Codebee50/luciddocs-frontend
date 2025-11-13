@@ -106,12 +106,13 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <motion.div
                 key={step.title}
-                className={`flex flex-row items-center gap-4 ${
-                  index % 2 === 0 ? "flex-row-reverse" : ""
-                }`}
+                className={`flex flex-row items-center gap-4`}
+                // className={`flex flex-row items-center gap-4 ${
+                //   index % 2 === 0 ? "flex-row-reverse" : ""
+                // }`}
                 variants={stepVariants as Variants}
               >
-                <div>
+                {/* <div>
                   <motion.p
                     className="text-4xl font-clash text-denary opacity-50 font-semibold"
                     initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
@@ -125,10 +126,10 @@ const HowItWorks = () => {
                   >
                     0{index + 1}
                   </motion.p>
-                </div>
+                </div> */}
 
                 <motion.div
-                  className="flex flex-row items-center bg-grey01 rounded-xl p-4 gap-4 shadow-sm shadow-senary"
+                  className="flex flex-row items-center bg-[#161719] rounded-xl p-4 gap-4 shadow-sm border border-denary/10"
                   initial={{ opacity: 0, scale: 0.92 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -155,7 +156,7 @@ const HowItWorks = () => {
                   </motion.div>
                   <div>
                     <h3 className="sm:text-xl font-clash">{step.title}</h3>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-denary/70">
                       {step.short_description}
                     </p>
                   </div>

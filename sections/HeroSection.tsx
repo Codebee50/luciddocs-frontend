@@ -5,6 +5,7 @@ import Nav from "@/components/Nav";
 import { RxCaretRight } from "react-icons/rx";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const containerVariants = {
   hidden: {},
@@ -36,6 +37,7 @@ const popVariant = {
 };
 
 const HeroSection = () => {
+  const router = useRouter();
   return (
     <motion.div
       className="flex flex-col py-5 relative"
@@ -110,6 +112,7 @@ const HeroSection = () => {
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
+                onClick={() => router.push("/waitlist")}
               >
                 Get started for free
               </motion.button>
@@ -158,10 +161,12 @@ const HeroSection = () => {
             height={1000}
             className="w-full h-full object-top rounded-t-lg "
           />
-        </motion.div>
-      </div>
 
-      <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div>
+        </motion.div>
+
+        <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div>
+
+      </div>
     </motion.div>
   );
 };

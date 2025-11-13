@@ -6,11 +6,16 @@ import {
   IoIosArrowRoundForward,
 } from "react-icons/io";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import FlashcardLandingPageDemo from "@/components/landing/FlashcardLandingPageDemo";
 import SummarizeContentIllustration from "@/components/landing/SummarizeContentIllustration";
 import GenerateQuizIllustrationContent from "@/components/landing/GenerateQuizIllustrationContent";
 import Marquee from "@/components/Marquee";
+
+const fadeUpVariant: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 
 const Benefits = () => {
   const quizTypes = [
@@ -18,8 +23,6 @@ const Benefits = () => {
     { type: "Essay" },
     { type: "Multiple choice" },
   ];
-
-
 
   return (
     <div className="section-container  bg-bg-primary w-full">
@@ -41,6 +44,8 @@ const Benefits = () => {
               content. Export your quiz as pdf or take it as an exam on
               LucidDocs.
             </p>
+
+   
           </div>
 
           <div className="w-full mt-10 relative">

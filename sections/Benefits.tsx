@@ -19,32 +19,10 @@ const Benefits = () => {
     { type: "Multiple choice" },
   ];
 
-  // List all images in /public/images/schools (school1.png to school20.png), explicitly
-  const schoolImages = [
-    "/images/schools/school1.png",
-    "/images/schools/school2.png",
-    "/images/schools/school3.png",
-    "/images/schools/school4.png",
-    "/images/schools/school5.png",
-    "/images/schools/school6.png",
-    "/images/schools/school7.png",
-    "/images/schools/school8.png",
-    "/images/schools/school9.png",
-    "/images/schools/school10.png",
-    "/images/schools/school11.png",
-    "/images/schools/school12.png",
-    "/images/schools/school13.png",
-    "/images/schools/school14.png",
-    "/images/schools/school15.png",
-    "/images/schools/school16.png",
-    "/images/schools/school17.png",
-    "/images/schools/school18.png",
-    "/images/schools/school19.png",
-    "/images/schools/school20.png",
-  ];
+
 
   return (
-    <div className="section-container padding-x bg-bg-primary">
+    <div className="section-container  bg-bg-primary w-full">
       <div className="w-full flex flex-col items-center justify-center">
         <h2 className="sm:text-4xl text-2xl text-center font-clash">
           How People use LucidDocs to <br />
@@ -53,7 +31,7 @@ const Benefits = () => {
       </div>
 
       <div className="w-full bg-bg-primary grid grid-cols-1 md:grid-cols-2 gap-0 mt-30">
-        <div className="border-t md:border-r border-b border-denary/10 p-10">
+        <div className="border-t md:border-r border-b border-denary/10 max-sm:py-7 sm:p-10">
           <div className="flex flex-col gap-2">
             <h1 className="text-white text-2xl font-medium font-clash">
               From document to quiz in seconds.
@@ -77,7 +55,7 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className="border-t border-b border-denary/10 p-10 ">
+        <div className="border-t border-b border-denary/10 max-sm:py-7 sm:p-10 ">
           <div className="flex flex-col gap-2">
             <h1 className="text-white text-2xl font-medium font-clash">
               Summarize documents with ease
@@ -102,71 +80,8 @@ const Benefits = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 py-20 overflow-hidden w-full">
-        <p className="text-denary text-center capitalize mb-10">
-          Designed for ambitious learners everywhere.
-        </p>
-
-        <div className="slider overflow-hidden w-full flex justify-start m-auto">
-          <div className="slide-track gap-10">
-            {[...schoolImages, ...schoolImages].map((image, index) => (
-              <a
-                className="slide mx-2 h-auto min-w-[100px] box-border cursor-pointer"
-                key={`marquee-${index}`}
-                // href={`/product/${item.id}/`}
-              >
-                <div className="card overflow-hidden rounded-md mb-3 shadow w-full">
-                  <div className="relative overflow-hidden w-full">
-                    <Image
-                      src={image}
-                      alt="school"
-                      width={100}
-                      height={100}
-                      className="invert grayscale"
-                      draggable={false}
-                      style={{ userSelect: "none" }}
-                    />
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div className="w-full overflow-hidden mt-5 relative max-w-full hidden">
-          {/* Infinite scroll animation */}
-          <div className="absolute bg-linear-to-r from-bg-primary via-transparent to-bg-primary inset-0 z-10"></div>
-          <div
-            className="w-full relative flex items-center overflow-hidden"
-            style={{
-              minHeight: 100,
-            }}
-          >
-            <div
-              className="flex flex-row items-center gap-10 animate-scroll-x"
-              style={{
-                animation: "school-scroll 18s linear infinite",
-              }}
-            >
-              {[...schoolImages, ...schoolImages].map((image, index) => (
-                <Image
-                  key={index}
-                  src={image}
-                  alt="school"
-                  width={100}
-                  height={100}
-                  className="invert grayscale"
-                  draggable={false}
-                  style={{ userSelect: "none" }}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="w-full bg-bg-primary grid grid-cols-1 md:grid-cols-2 gap-0 ">
-        <div className="border-t md:border-r border-b border-denary/10 p-10">
+        <div className="border-t md:border-r border-b border-denary/10 max-sm:py-7 sm:p-10">
           <div className="flex flex-col gap-2">
             <h1 className="text-white text-2xl font-medium font-clash">
               Generate flashcards from your documents
@@ -190,7 +105,7 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className="border-t border-b border-denary/10 p-10 ">
+        <div className="border-t border-b border-denary/10 max-sm:py-7 sm:p-10 ">
           <div className="flex flex-col gap-2">
             <h1 className="text-white text-2xl font-medium font-clash">
               Have conversations with your documents{" "}

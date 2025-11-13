@@ -48,7 +48,7 @@ const HeroSection = () => {
         <Nav />
       </motion.div>
 
-      <div className="padding-x pt-20">
+      <div className="padding-x pt-10 sm:pt-20">
         <div className="w-full flex items-center justify-center">
           <motion.div
             className="flex flex-col items-center justify-center"
@@ -127,33 +127,41 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-full relative stack mt-10">
-        {/* <motion.div
-          className="h-full overflow-hidden self-end"
-        >
-          <Image
-            src="/images/vibesbg2.svg"
-            alt="hero-section-image"
-            width={1000}
-            height={1000}
-            className="w-full min-h-[300px] lg:min-h-[500px] object-cover object-top z-0"
-          />
-        </motion.div> */}
+      <div className=" relative hidden">
+        <div className="con-l1">
+          <div className="con-l2 bleed-l1">
+            <div className="con-l3">
+              <div className="con-l4">
+                <div className="con-l4-base con-l4-threeD">
+                  <div className="con-l5">
+                    <Image
+                      src="/images/Dashboard.svg"
+                      alt="Dashboard preview"
+                      width={1000}
+                      height={1000}
+                      className="w-full h-full object-top rounded-t-lg "
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <motion.div
-          className="w-[95%] lg:w-full max-w-[1200px] mx-auto  rounded-lg p-2 z-10 bg-bg-primary border border-senary/30   tilted-image self-end "
-        >
+      <div className="w-full py-10 relative ">
+        <motion.div className="w-[95%] lg:w-full max-w-[1200px] mx-auto  rounded-lg p-2 z-10 bg-bg-primary border border-denary/30 tilted-image">
           <Image
-            src="/images/dashpreview1.png"
+            src="/images/Dashboard.svg"
             alt="Dashboard preview"
             width={1000}
             height={1000}
             className="w-full h-full object-top rounded-t-lg "
           />
         </motion.div>
-
-        {/* <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div> */}
       </div>
+
+      <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div>
     </motion.div>
   );
 };

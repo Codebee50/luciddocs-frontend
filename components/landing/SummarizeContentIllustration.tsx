@@ -82,7 +82,7 @@ const SummarizeContentIllustration = () => {
       className="w-full relative min-h-[300px] flex items-center justify-center"
       ref={containerRef}
     >
-      <div className="sm:w-full w-[90%] mx-auto min-h-[250px] max-h-[500px] max-sm:overflow-y-hidden no-scrollbar overflow-hidden  bg-background rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start relative">
+      <div className="sm:w-full w-[90%] mx-auto min-h-[250px] max-h-[500px] max-sm:overflow-y-hidden no-scrollbar overflow-hidden  bg-bg-primary rounded-lg border p-4 border-denary/30 flex flex-col items-start justify-start relative">
         {/* Show Long Content */}
         {/* {(!started || step === 0 || step === 1) && ( */}
         <div className="w-full font-light">{LONG_TEXT}</div>
@@ -96,7 +96,7 @@ const SummarizeContentIllustration = () => {
         )} */}
       </div>
 
-      <div className="w-full absolute sm:bottom-0 sm:right-10 bg-background p-4 border border-senary/30 rounded-lg shadow-2xl shadow-senary/10">
+      <div className="w-full absolute sm:bottom-0 sm:right-10 bg-bg-primary p-4 border border-senary/30 rounded-lg shadow-2xl shadow-senary/10">
         <TypeAnimation
           sequence={SHORT_TEXT_SEQUENCE}
           wrapper="span"

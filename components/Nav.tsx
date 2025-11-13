@@ -42,7 +42,7 @@ const Nav = () => {
         ))}
       </div>
 
-      <div className="bg-background rounded-lg p-2 border border-denary/20 max-sm:block hidden">
+      <div className="bg-bg-primary rounded-lg p-2 border border-denary/20 max-sm:block hidden">
         <RxHamburgerMenu size={25} />
       </div>
 

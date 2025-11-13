@@ -128,12 +128,8 @@ const HeroSection = () => {
       </div>
 
       <div className="w-full relative stack mt-10">
-        <motion.div
+        {/* <motion.div
           className="h-full overflow-hidden self-end"
-          // initial={{ opacity: 0, y: 40, scale: 1.03 }}
-          // whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          // transition={{ duration: 1, ease: "easeOut" }}
-          // viewport={{ once: true, amount: 0.3 }}
         >
           <Image
             src="/images/vibesbg2.svg"
@@ -142,25 +138,21 @@ const HeroSection = () => {
             height={1000}
             className="w-full min-h-[300px] lg:min-h-[500px] object-cover object-top z-0"
           />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
-          className="w-[95%] lg:w-full max-w-[1000px] mx-auto lg:h-[80vh] max-h-[600px] rounded-t-lg p-2 z-10 bg-[#1E1E1E] self-end "
-          // initial={{ opacity: 0, y: 60, scale: 0.98 }}
-          // whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          // transition={{ duration: 0.92, ease: "easeOut", delay: 0.2 }}
-          // viewport={{ once: true, amount: 0.2 }}
+          className="w-[95%] lg:w-full max-w-[1200px] mx-auto  rounded-lg p-2 z-10 bg-bg-primary border border-senary/30   tilted-image self-end "
         >
           <Image
             src="/images/dashpreview1.png"
-            alt="hero-section-image"
+            alt="Dashboard preview"
             width={1000}
             height={1000}
-            className="w-full h-full object-cover object-top rounded-t-lg"
+            className="w-full h-full object-top rounded-t-lg "
           />
         </motion.div>
 
-        <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div>
+        {/* <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div> */}
       </div>
     </motion.div>
   );

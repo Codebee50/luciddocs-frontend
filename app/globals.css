@@ -2,8 +2,8 @@
 
 @import "tailwindcss";
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #08090a;
+  --foreground: #ededed;
 }
 
 @font-face {
@@ -57,6 +57,9 @@
   --font-clash: "ClashDisplay", ui-sans-serif, system-ui, sans-serif;
   --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
 
+  --color-bg-primary: #08090a;
+  --color-quaternary: #28282c;
+
   --color-denary: #aaaaaa;
   --color-senary: #22c55e;
   --color-renary: #eab308;
@@ -65,7 +68,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #08090a;
     --foreground: #ededed;
   }
 }
@@ -109,6 +112,99 @@ body {
     -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
     scrollbar-width: none; /* Hide scrollbar for Firefox */
   }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-360px * 6));
+    }
+  }
+
+  @keyframes scroll-reverse {
+    0% {
+      transform: translateX(calc(-360px * 6));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes school-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-x {
+    width: max-content;
+    will-change: transform;
+  }
+
+  .slide-track {
+    display: flex;
+    width: calc(360px * 12);
+    animation: scroll 60s linear infinite;
+  }
+  .slide-track-reverse {
+    display: flex;
+    width: calc(360px * 12);
+    animation: scroll-reverse 60s linear infinite;
+  }
+
+  .tilted-image {
+    transform: perspective(2900px) rotateX(25deg) rotateY(-15deg);
+    transform-origin: center;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+  }
+
+  .tilted-image:hover {
+    transform: rotateX(25deg) rotateY(-15deg) scale(1.02);
+  }
+
+
+  .screenshot-container {
+    perspective: 1500px;
+  }
+  
+  .screenshot {
+    transform: rotateX(15deg) rotateY(20deg);
+    border-radius: 12px;
+    box-shadow: 
+      0 30px 60px rgba(0, 0, 0, 0.4),
+      0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .screenshot:hover {
+    transform: rotateX(10deg) rotateY(15deg) scale(1.02);
+  }
+
+
+  .HeroIllustration-module__LcHIQG__root {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    --Sidebar-width: 260px;
+    width: 100%;
+    height: 900px;
+}
+
+
+  .hero-illustration {
+    contain: strict;
+    perspective: 4000px;
+    perspective-origin: 100% 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+}
 }
 
 .glow-box {

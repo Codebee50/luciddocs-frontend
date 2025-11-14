@@ -27,7 +27,10 @@ const Benefits = () => {
   ];
 
   return (
-    <div className="section-container  bg-bg-primary w-full scroll-mt-[70px]" id="about">
+    <div
+      className="section-container  bg-bg-primary w-full scroll-mt-[70px]"
+      id="about"
+    >
       <div className="w-full flex flex-col items-center justify-center">
         <h2 className="sm:text-4xl text-2xl text-center font-clash">
           How People use {appConfig.appName} to <br />
@@ -43,7 +46,7 @@ const Benefits = () => {
             </h1>
             <p className="text-denary/70 font-poppins text-sm">
               Upload your PDF, Word, or any document and get a quiz based on the
-              content. Export your quiz as pdf or take it as an exam on
+              content. Export your quiz as pdf or take it as an exam on{" "}
               {appConfig.appName}.
             </p>
           </div>
@@ -66,9 +69,8 @@ const Benefits = () => {
               Summarize documents with ease
             </h1>
             <p className="text-denary/70 font-poppins text-sm">
-              Upload your PDF, Word, or any document and get a summary based on
-              the content. Export your summary as pdf or take it as an exam on
-              {appConfig.appName}.
+              Simply upload your PDF, Word, or other document, and get a clear,
+              concise summary generated instantly from its contents.
             </p>
           </div>
 
@@ -92,9 +94,9 @@ const Benefits = () => {
               Have conversations with your documents{" "}
             </h1>
             <p className="text-denary/70 font-poppins text-sm">
-              Upload your PDF, Word, or any document and get a quiz based on the
-              content. Export your quiz as pdf or take it as an exam on
-              {appConfig.appName}.
+              Instantly ask questions or chat with your documents using
+              AI-powered natural language. Get quick, accurate answers and
+              insights without searching through pages.
             </p>
           </div>
 
@@ -116,9 +118,7 @@ const Benefits = () => {
               Generate flashcards from your documents
             </h1>
             <p className="text-denary/70 font-poppins text-sm">
-              Upload your PDF, Word, or any document and get a summary based on
-              the content. Export your summary as pdf or take it as an exam on
-              {appConfig.appName}.
+              Effortlessly turn your study materials into interactive flashcards. Reinforce your learning, test your knowledge, and review key concepts anytime all generated automatically from your documents.
             </p>
           </div>
 
@@ -160,8 +160,6 @@ const Benefits = () => {
           </div> */}
         </div>
       </div>
-
-   
     </div>
   );
 };

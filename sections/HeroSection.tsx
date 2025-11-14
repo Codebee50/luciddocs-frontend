@@ -50,7 +50,16 @@ const HeroSection = () => {
         <Nav />
       </motion.div>
 
-      <div className="padding-x pt-10 sm:pt-20">
+      <div
+        className="padding-x pt-10 sm:pt-20"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.017) 1px, transparent 1px)
+          `,
+          backgroundSize: "80px 80px",
+        }}
+      >
         <div className="w-full flex items-center justify-center">
           <motion.div
             className="flex flex-col items-center justify-center"

@@ -26,7 +26,8 @@ const Nav = () => {
     <div className="flex flex-row items-center justify-between w-full max-w-[1000px] mx-auto bg-green-500/10 border border-green-500/20 backdrop-blur-sm rounded-lg px-4 py-2">
       <div className="flex flex-row items-center gap-6">
         <div className="flex items-center gap-2">
-          <Image src="/lucidlogo.svg" alt="logo" width={30} height={30} />
+          <Image src="/bearcap.svg" alt="logo" width={40} height={40} />
+          {/* <Image src="/logo.svg" alt="logo" width={30} height={30} /> */}
         </div>
       </div>
 

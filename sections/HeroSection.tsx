@@ -125,35 +125,11 @@ const HeroSection = () => {
               >
                 Book a demo
                 <RxCaretRight size={20} />
-
               </motion.button>
             </motion.div>
           </motion.div>
         </div>
       </div>
-
-      <div className=" relative">
-        <div className="con-l1">
-          <div className="con-l2 bleed-l1">
-            <div className="con-l3">
-              <div className="con-l4">
-                <div className="con-l4-base con-l4-threeD">
-                  <div className="con-l5">
-                    <Image
-                      src="/images/Dashboard.svg"
-                      alt="Dashboard preview"
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-top rounded-t-lg "
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
 
       {/* con l1 */}
       <div className="pl-[24px] pr-[24px] 2xl:max-w-[1024px] w-full ml-auto mr-auto relative overflow-hidden">
@@ -165,7 +141,7 @@ const HeroSection = () => {
             <div className="dashboard-preview-container relative  w-full h-full">
               {/* con-l4-base con-l4-threeD */}
               <div className="dashboard-preview-container-inner mt-[80px] sm:mt-[150px] bg-bg-primary max-w-[1600px]">
-              {/* <div className="dashboard-preview-container-inner mt-[80px] sm:mt-[150px] bg-bg-primary max-w-[1600px] sm:h-[900px]"> */}
+                {/* <div className="dashboard-preview-container-inner mt-[80px] sm:mt-[150px] bg-bg-primary max-w-[1600px] sm:h-[900px]"> */}
                 <Image
                   src="/images/Dashboard.svg"
                   alt="Dashboard preview"
@@ -176,28 +152,10 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-
         </div>
 
         <div className="absolute inset-0 z-20 bg-linear-to-r from-transparent w-screen max-sm:hidden  to-bg-primary"></div>
-
       </div>
-
-      {/* <div className="w-full py-10 relative ">
-        <motion.div className="w-[95%] lg:w-full max-w-[1200px] mx-auto  rounded-lg p-2 z-10 bg-bg-primary border border-denary/30 tilted-image">
-          <Image
-            src="/images/Dashboard.svg"
-            alt="Dashboard preview"
-            width={1000}
-            height={1000}
-            className="w-full h-full object-top rounded-t-lg "
-          />
-
-        </motion.div>
-
-        <motion.div className="bg-linear-to-b from-transparent via-black/10 to-background absolute inset-0 z-20"></motion.div>
-
-      </div> */}
     </motion.div>
   );
 };

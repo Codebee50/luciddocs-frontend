@@ -41,7 +41,7 @@ const Page = () => {
     setIsLoading(false);
   };
   return (
-    <div className="relative padding-x py-10 flex flex-col items-center min-h-screen overflow-hidden">
+    <div className="relative padding-x py-10 flex flex-col items-center min-h-screen overflow-hidden bg-bg-primary">
       {/* Grid lines background */}
       <div
         aria-hidden="true"

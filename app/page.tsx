@@ -7,7 +7,7 @@ import Contact from "@/sections/Contact";
 import CallToAction from "@/sections/CallToAction";
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-bg-primary">
       <HeroSection />
       <SchoolsMarquee />
       <Benefits />

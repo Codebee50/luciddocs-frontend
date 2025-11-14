@@ -6,6 +6,8 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { RxCaretRight } from "react-icons/rx";
+import { RiBearSmileFill } from "react-icons/ri";
+import { RiBearSmileLine } from "react-icons/ri";
 
 const containerVariants = {
   hidden: {},
@@ -40,15 +42,15 @@ const HeroSection = () => {
   const router = useRouter();
   return (
     <motion.div
-      className="flex flex-col py-5 relative"
+      className="flex flex-col pb-5 pt-[70px] relative"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       {/* Nav animation: fade in from top */}
-      <motion.div className="padding-x" variants={fadeUpVariant as Variants}>
+      <div className="padding-x">
         <Nav />
-      </motion.div>
+      </div>
 
       <div
         className="padding-x pt-10 sm:pt-20"
@@ -72,21 +74,35 @@ const HeroSection = () => {
               className="bg-[#3A3A3A]/20 px-6 py-3 rounded-full flex flex-row items-center gap-2"
               variants={fadeUpVariant as Variants}
             >
-              <motion.p
-                className="font-medium text-white max-sm:text-sm"
-                variants={fadeVariant as Variants}
-                transition={{ delay: 0.15 }}
-              >
-                Product update v1.0
-              </motion.p>
               <motion.span
                 variants={fadeVariant as Variants}
                 transition={{ delay: 0.18 }}
               >
-                <RxCaretRight size={25} />
+                <RiBearSmileLine size={18} />
               </motion.span>
+              <motion.p
+                className="font-medium text-white text-sm"
+                variants={fadeVariant as Variants}
+                transition={{ delay: 0.15 }}
+              >
+                V1.0 Coming Soon
+              </motion.p>
             </motion.div>
+
+
+
             <motion.h1
+              className="text-4xl md:text-5xl text-center mt-5 capitalize font-clash"
+              variants={fadeUpVariant as Variants}
+              transition={{ delay: 0.23 }}
+            >
+              Upload any document, <br />{" "}
+              <span className="font-medium gradient-text">
+              Get everything you need to study it.
+              </span>
+            </motion.h1>
+
+            {/* <motion.h1
               className="text-4xl md:text-6xl text-center mt-5 capitalize font-clash"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.23 }}
@@ -95,15 +111,13 @@ const HeroSection = () => {
               <span className="font-medium gradient-text">
                 Quizes, Flashcards, Summaries
               </span>
-            </motion.h1>
-            {/* <h1 className="text-7xl text-center mt-5">
-              Unlock Powerful Insights <br />{" "}
-              <span className="font-medium animate-text bg-gradient-to-r from-green-500 via-yellow-500 to-green-500 bg-clip-text text-transparent">
-                AI Document Analysis
-              </span>
-            </h1> */}
+            </motion.h1> */}
+
+
+
+  
             <motion.p
-              className="text-center max-w-[700px] mx-auto text-[#AAAAAA] max-sm:text-sm"
+              className="text-center max-w-[700px] mx-auto text-[#AAAAAA] max-sm:text-sm mt-4"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.34 }}
             >
@@ -125,7 +139,8 @@ const HeroSection = () => {
               >
                 Get started for free
               </motion.button>
-              <motion.button
+              <motion.a
+                href="https://calendar.notion.so/meet/kyrianonuh/tb1o53pca"
                 className="bg-transparent  px-6 py-3 rounded-lg font-medium text-nowrap max-sm:w-full flex flex-row items-center justify-center gap-2 text-denary"
                 variants={popVariant as Variants}
                 whileHover={{ scale: 1.04 }}
@@ -134,7 +149,7 @@ const HeroSection = () => {
               >
                 Book a demo
                 <RxCaretRight size={20} />
-              </motion.button>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>

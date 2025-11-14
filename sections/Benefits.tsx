@@ -26,7 +26,7 @@ const Benefits = () => {
   ];
 
   return (
-    <div className="section-container  bg-bg-primary w-full">
+    <div className="section-container  bg-bg-primary w-full scroll-mt-[70px]" id="about">
       <div className="w-full flex flex-col items-center justify-center">
         <h2 className="sm:text-4xl text-2xl text-center font-clash">
           How People use LucidDocs to <br />
@@ -122,9 +122,8 @@ const Benefits = () => {
           </div>
 
           <div className="relative mt-14 w-full stack">
-
-          <div className="w-[80%] bg-quaternary h-[200px] flex flex-row items-center justify-center -mt-6 mx-auto rounded-2xl"></div>
-          <div className="w-[90%] bg-card-gray h-[200px] flex flex-row items-center justify-center -mt-3 mx-auto rounded-2xl"></div>
+            <div className="w-[80%] bg-quaternary h-[200px] flex flex-row items-center justify-center -mt-6 mx-auto rounded-2xl"></div>
+            <div className="w-[90%] bg-card-gray h-[200px] flex flex-row items-center justify-center -mt-3 mx-auto rounded-2xl"></div>
 
             <div className="w-full h-[200px] bg-card-gray rounded-lg flex flex-col p-5 justify-between">
               <div className="flex flex-row items-center gap-5">

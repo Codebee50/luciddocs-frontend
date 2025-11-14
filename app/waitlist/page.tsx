@@ -54,12 +54,15 @@ const Page = () => {
           backgroundSize: "80px 80px",
         }}
       />
-      <div className="flex flex-row items-center justify-center gap-2 grayscale">
-        <Image src="/logo.svg" alt="logo" width={30} height={30} />
-        <h1 className="text-lg font-semibold text-denary">
-          {appConfig.appName}
-        </h1>
-      </div>
+
+      <Link href="/">
+        <div className="flex flex-row items-center justify-center gap-2 grayscale">
+          <Image src="/logo.svg" alt="logo" width={30} height={30} />
+          <h1 className="text-lg font-semibold text-denary">
+            {appConfig.appName}
+          </h1>
+        </div>
+      </Link>
 
       <div className="flex flex-col items-center justify-center gap-5 mt-30 max-sm:mt-20">
         <div className="bg-grey01 rounded-full py-2 pr-4 pl-4 flex flex-row items-center gap-2 border border-denary/20">
@@ -89,7 +92,10 @@ const Page = () => {
             <p className="text-denary max-sm:text-sm">
               We will notify you when {appConfig.appName} is released.
             </p>
-            <Link href="/" className="text-bg-primary font-medium text-sm px-4 py-2 rounded-lg bg-senary mt-5">
+            <Link
+              href="/"
+              className="text-bg-primary font-medium text-sm px-4 py-2 rounded-lg bg-senary mt-5"
+            >
               Back To Home
             </Link>
           </div>
@@ -144,7 +150,9 @@ const Page = () => {
               )}
             </button>
 
-            {error && <p className="text-red-500 text-sm mt-2 text-center">{error}</p>}
+            {error && (
+              <p className="text-red-500 text-sm mt-2 text-center">{error}</p>
+            )}
           </form>
         )}
       </div>

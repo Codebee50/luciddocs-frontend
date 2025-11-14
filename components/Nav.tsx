@@ -11,19 +11,20 @@ const Nav = () => {
     },
     {
       name: "About",
-      href: "/about",
+      href: "/#about",
     },
     {
       name: "Contact",
-      href: "/contact",
+      href: "/#contact",
     },
     {
-      name: "Blog",
-      href: "/blog",
+      name: "Waitlist",
+      href: "/waitlist",
     },
   ];
   return (
-    <div className="flex flex-row items-center justify-between w-full max-w-[1000px] mx-auto bg-quaternary/10 border border-green-500/10 backdrop-blur-sm rounded-lg px-4 py-2">
+    
+    <div className="flex flex-row items-center justify-between w-[90%] max-w-[1080px] mx-auto bg-quaternary/10 border border-green-500/10 backdrop-blur-sm rounded-lg px-4 py-2 fixed top-4 left-1/2 -translate-x-1/2 z-50">
       <div className="flex flex-row items-center gap-6">
         <div className="flex items-center gap-2">
           <Image src="/logo.svg" alt="logo" width={40} height={40} />
@@ -35,7 +36,7 @@ const Nav = () => {
           <Link
             href={item.href}
             key={item.name}
-            className="hover:text-green-500 transition-colors duration-300"
+            className="hover:text-white transition-colors duration-300 text-denary text-sm"
           >
             {item.name}
           </Link>

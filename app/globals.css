@@ -59,7 +59,7 @@
 
   --color-bg-primary: #08090a;
   --color-quaternary: #28282c;
-  --color-card-gray: #1E1F21;
+  --color-card-gray: #1e1f21;
 
   --color-denary: #aaaaaa;
   --color-senary: #22c55e;
@@ -78,6 +78,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins);
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -251,17 +256,15 @@ body {
   perspective: 4000px;
   transform-style: preserve-3d;
   perspective-origin: 100% 0;
-
 }
 
-.dashboard-preview-container-inner{
-  transform: translate(2%) scale(1.2) rotateX(47deg) rotateY(31deg) rotate(324deg);
+.dashboard-preview-container-inner {
+  transform: translate(2%) scale(1.2) rotateX(47deg) rotateY(31deg)
+    rotate(324deg);
   transform-origin: 0 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-
 }
-
 
 .flashcards-container {
   perspective: 2000px;
@@ -270,9 +273,10 @@ body {
   height: 100%;
 }
 
-.flashcard-card{
-  transform: skewY(-4deg) rotateX(-14deg) rotateY(20deg) translateZ(calc(-1 * 180px)) translateX(calc(10% + 3%)) translateY(-15%);
+.flashcard-card {
+  transform: skewY(-4deg) rotateX(-14deg) rotateY(20deg)
+    translateZ(calc(-1 * 180px)) translateX(calc(10% + 3%)) translateY(-15%);
   transform-style: preserve-3d;
-  transition: .32s var(--ease-out-quad);
+  transition: 0.32s var(--ease-out-quad);
   transition-property: transform, background;
 }

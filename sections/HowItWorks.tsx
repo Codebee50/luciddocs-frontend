@@ -55,7 +55,7 @@ const HowItWorks = () => {
 
   return (
     <motion.div
-      className="section-container padding-x w-full"
+      className="section-container w-full"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -63,13 +63,13 @@ const HowItWorks = () => {
       <div className="w-full grid grid-cols-1 gap-20 items-center justify-center">
         <div className="flex flex-col gap-3">
           <motion.h2
-            className="text-4xl  font-clash gradient-text"
+            className="sm:text-3xl text-2xl text-center  font-clash gradient-text"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
-            How It Works
+            Your new study routine in 10 seconds
           </motion.h2>
 
           <motion.div

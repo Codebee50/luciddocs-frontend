@@ -23,7 +23,7 @@ const Nav = () => {
     },
   ];
   return (
-    <div className="flex flex-row items-center justify-between w-full max-w-[1000px] mx-auto bg-green-500/10 border border-green-500/20 backdrop-blur-sm rounded-lg px-4 py-2">
+    <div className="flex flex-row items-center justify-between w-full max-w-[1000px] mx-auto bg-quaternary/10 border border-green-500/10 backdrop-blur-sm rounded-lg px-4 py-2">
       <div className="flex flex-row items-center gap-6">
         <div className="flex items-center gap-2">
           <Image src="/bearcap.svg" alt="logo" width={40} height={40} />
@@ -31,12 +31,12 @@ const Nav = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-5 max-sm:hidden">
+      <div className="flex items-center gap-7 max-sm:hidden">
         {navItems.map((item) => (
           <Link
             href={item.href}
             key={item.name}
-            className="font-clash hover:text-green-500 transition-colors duration-300"
+            className="hover:text-green-500 transition-colors duration-300"
           >
             {item.name}
           </Link>

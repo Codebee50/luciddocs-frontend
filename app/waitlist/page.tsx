@@ -83,7 +83,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="w-full max-w-[700px] mx-auto mt-20  shadow-xl shadow-senary/50 bg-grey01 rounded-xl px-6 py-14">
+      <div className="w-full max-w-[700px] mx-auto mt-20  shadow-xl shadow-senary/50 bg-grey01 rounded-xl px-6 sm:px-10 py-10 sm:py-14">
         {isSubmitted ? (
           <div className="flex flex-col items-center justify-center gap-2 my-5">
             <p className="text-white sm:text-2xl text-xl font-clash">

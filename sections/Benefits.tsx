@@ -12,6 +12,7 @@ import SummarizeContentIllustration from "@/components/landing/SummarizeContentI
 import GenerateQuizIllustrationContent from "@/components/landing/GenerateQuizIllustrationContent";
 import Marquee from "@/components/Marquee";
 import { RiFlashlightFill } from "react-icons/ri";
+import { appConfig } from "@/constants";
 
 const fadeUpVariant: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -29,7 +30,7 @@ const Benefits = () => {
     <div className="section-container  bg-bg-primary w-full scroll-mt-[70px]" id="about">
       <div className="w-full flex flex-col items-center justify-center">
         <h2 className="sm:text-4xl text-2xl text-center font-clash">
-          How People use LucidDocs to <br />
+          How People use {appConfig.appName} to <br />
           <span className="gradient-text">Study smarter, not harder</span>
         </h2>
       </div>
@@ -43,7 +44,7 @@ const Benefits = () => {
             <p className="text-denary/70 font-poppins text-sm">
               Upload your PDF, Word, or any document and get a quiz based on the
               content. Export your quiz as pdf or take it as an exam on
-              LucidDocs.
+              {appConfig.appName}.
             </p>
           </div>
 
@@ -67,7 +68,7 @@ const Benefits = () => {
             <p className="text-denary/70 font-poppins text-sm">
               Upload your PDF, Word, or any document and get a summary based on
               the content. Export your summary as pdf or take it as an exam on
-              LucidDocs.
+              {appConfig.appName}.
             </p>
           </div>
 
@@ -93,7 +94,7 @@ const Benefits = () => {
             <p className="text-denary/70 font-poppins text-sm">
               Upload your PDF, Word, or any document and get a quiz based on the
               content. Export your quiz as pdf or take it as an exam on
-              LucidDocs.
+              {appConfig.appName}.
             </p>
           </div>
 
@@ -117,7 +118,7 @@ const Benefits = () => {
             <p className="text-denary/70 font-poppins text-sm">
               Upload your PDF, Word, or any document and get a summary based on
               the content. Export your summary as pdf or take it as an exam on
-              LucidDocs.
+              {appConfig.appName}.
             </p>
           </div>
 

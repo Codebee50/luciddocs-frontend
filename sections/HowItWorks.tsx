@@ -3,6 +3,7 @@ import React from "react";
 import { UserPlus, FileUp, Sparkles, ListChecks, FileText } from "lucide-react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { appConfig } from "@/constants";
 
 const containerVariants = {
   hidden: {},
@@ -25,13 +26,13 @@ const HowItWorks = () => {
       icon: UserPlus,
       title: "Sign Up & Log In",
       short_description:
-        "Create your LucidDocs account to get started—it's free and easy.",
+        `Create your ${appConfig.appName} account to get started—it's free and easy.`,
     },
     {
       icon: FileUp,
       title: "Upload Your Document",
       short_description:
-        "Choose your PDF, Word, or text file and upload it securely to LucidDocs.",
+        `Choose your PDF, Word, or text file and upload it securely to ${appConfig.appName}.`,
     },
     {
       icon: Sparkles,

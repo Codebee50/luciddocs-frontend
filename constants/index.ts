@@ -1,4 +1,4 @@
 export const appConfig = {
-    appName: "LucidDocs",
-    email: "info@luciddocs.com"
+    appName: "StudyBear",
+    email: "info@studybear.com"
 }

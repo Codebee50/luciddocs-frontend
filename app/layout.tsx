@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { appConfig } from "@/constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LucidDocs",
-  description: "Advanced AI-Powered insights into your documents",
+  title: appConfig.appName,
+  description: "Advanced AI-Powered insights into your study materials",
 };
 
 export default function RootLayout({

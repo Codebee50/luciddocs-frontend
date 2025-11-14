@@ -26,13 +26,20 @@ const HowItWorks = () => {
       icon: UserPlus,
       title: "Sign Up & Log In",
       short_description:
-        `Create your ${appConfig.appName} account to get started—it's free and easy.`,
+        `Create your ${appConfig.appName} account to get started, it's free and easy.`,
+    },
+
+    {
+      icon: FileUp,
+      title: "Create a space",
+      short_description:
+        `A space is a collection of documents where our AI can process and generate content.`,
     },
     {
       icon: FileUp,
       title: "Upload Your Document",
       short_description:
-        `Choose your PDF, Word, or text file and upload it securely to ${appConfig.appName}.`,
+        `Choose your PDF, Word, or text file and upload it securely to the space.`,
     },
     {
       icon: Sparkles,
@@ -42,9 +49,9 @@ const HowItWorks = () => {
     },
     {
       icon: ListChecks,
-      title: "Generate Quizzes & Summaries",
+      title: "Generate learning materials",
       short_description:
-        "Instantly get quizzes or summaries tailored to your document's content.",
+        "Instantly get quizzes, flashcards and summaries tailored to your document's content.",
     },
     {
       icon: FileText,

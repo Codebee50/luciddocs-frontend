@@ -19,27 +19,23 @@ const stepVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-
 const HowItWorks = () => {
   const steps = [
     {
       icon: UserPlus,
       title: "Sign Up & Log In",
-      short_description:
-        `Create your ${appConfig.appName} account to get started, it's free and easy.`,
+      short_description: `Create your ${appConfig.appName} account to get started, it's free and easy.`,
     },
 
     {
       icon: FileUp,
       title: "Create a space",
-      short_description:
-        `A space is a collection of documents where our AI can process and generate content.`,
+      short_description: `A space is a collection of documents where our AI can process and generate content.`,
     },
     {
       icon: FileUp,
       title: "Upload Your Document",
-      short_description:
-        `Choose your PDF, Word, or text file and upload it securely to the space.`,
+      short_description: `Choose your PDF, Word, or text file and upload it securely to the space.`,
     },
     {
       icon: Sparkles,
@@ -93,7 +89,6 @@ const HowItWorks = () => {
                 className={`flex flex-col items-center  gap-4 h-full`}
                 variants={stepVariants as Variants}
               >
-   
                 <motion.div
                   className="flex flex-col items-center bg-bg-primary rounded-xl p-4 gap-4 shadow-sm border border-denary/10 h-full"
                   initial={{ opacity: 0, scale: 0.92 }}
@@ -105,13 +100,14 @@ const HowItWorks = () => {
                   }}
                   viewport={{ once: true, amount: 0.5 }}
                 >
-
                   <div className="self-start ">
-                    <p className="font-clash text-xl font-semibold text-quaternary">0{index + 1}</p>
+                    <p className="font-clash text-xl font-semibold text-quaternary">
+                      0{index + 1}
+                    </p>
                   </div>
-   
+
                   <div>
-                    <h3 className="font-medium">{step.title}</h3>
+                    <h3 className="font-medium text-white">{step.title}</h3>
                     <p className="text-sm text-denary/70 mt-2">
                       {step.short_description}
                     </p>
@@ -121,8 +117,6 @@ const HowItWorks = () => {
             ))}
           </motion.div>
         </div>
-
-        
       </div>
     </motion.div>
   );

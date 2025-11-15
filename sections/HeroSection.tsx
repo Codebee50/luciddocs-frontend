@@ -78,7 +78,7 @@ const HeroSection = () => {
                 variants={fadeVariant as Variants}
                 transition={{ delay: 0.18 }}
               >
-                <RiBearSmileLine size={18} />
+                <RiBearSmileLine size={18} className="text-white" />
               </motion.span>
               <motion.p
                 className="font-medium text-white text-sm"
@@ -92,7 +92,7 @@ const HeroSection = () => {
 
 
             <motion.h1
-              className="text-4xl md:text-5xl text-center mt-5 capitalize font-clash"
+              className="text-4xl md:text-5xl text-center mt-5 capitalize font-clash text-white"
               variants={fadeUpVariant as Variants}
               transition={{ delay: 0.23 }}
             >
